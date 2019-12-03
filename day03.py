@@ -27,9 +27,9 @@ def listCoords(directions, coordList):
                 currentPos = (xcounter, ycounter)
                 coordList.append(currentPos)
         elif direction[0] == "D":
-            while abs(counter) != distance:
+            while counter != distance:
                 ycounter = ycounter - 1
-                counter = counter - 1
+                counter = counter + 1
                 currentPos = (xcounter, ycounter)
                 coordList.append(currentPos)
         elif direction[0] == "R":
@@ -39,9 +39,9 @@ def listCoords(directions, coordList):
                 currentPos = (xcounter, ycounter)
                 coordList.append(currentPos)
         elif direction[0] == "L":
-            while abs(counter) != distance:
+            while counter != distance:
                 xcounter = xcounter - 1
-                counter = counter - 1
+                counter = counter + 1
                 currentPos = (xcounter, ycounter)
                 coordList.append(currentPos)
     return coordList
