@@ -20,30 +20,21 @@ def listCoords(directions, coordList):
         distance = int(direction[1:len(direction)])
         currentPos = (xcounter, ycounter)
         counter = 0
-        if direction[0] == "U":
-            while counter != distance:
+        while counter != distance:
+            if direction[0] == "U":
                 ycounter = ycounter + 1
-                counter = counter + 1
-                currentPos = (xcounter, ycounter)
-                coordList.append(currentPos)
-        elif direction[0] == "D":
-            while counter != distance:
+
+            elif direction[0] == "D":
                 ycounter = ycounter - 1
-                counter = counter + 1
-                currentPos = (xcounter, ycounter)
-                coordList.append(currentPos)
-        elif direction[0] == "R":
-            while counter != distance:
+                
+            elif direction[0] == "R":
                 xcounter = xcounter + 1
-                counter = counter + 1
-                currentPos = (xcounter, ycounter)
-                coordList.append(currentPos)
-        elif direction[0] == "L":
-            while counter != distance:
+
+            elif direction[0] == "L":
                 xcounter = xcounter - 1
-                counter = counter + 1
-                currentPos = (xcounter, ycounter)
-                coordList.append(currentPos)
+            counter = counter + 1
+            currentPos = (xcounter, ycounter)
+            coordList.append(currentPos)
     return coordList
 
 coordList1 = listCoords(wiresPath[0],wire1coords)
