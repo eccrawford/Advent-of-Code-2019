@@ -18,7 +18,6 @@ def listCoords(directions, coordList):
     ycounter = 0
     for direction in directions:
         distance = int(direction[1:len(direction)])
-        currentPos = (xcounter, ycounter)
         counter = 0
         while counter != distance:
             if direction[0] == "U":
