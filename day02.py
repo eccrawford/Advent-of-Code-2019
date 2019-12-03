@@ -20,9 +20,6 @@ print(intcode(intcodes1.copy()))
 def findInputs(): #Part Two
     target = 19690720
     
-    start = 0
-    end = 99
-
     for noun in range(100):
         for verb in range(100):
             copyIntcodes = intcodes1.copy()
