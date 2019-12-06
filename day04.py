@@ -6,7 +6,7 @@ end = 843167
 
 def checker(s, e):
     validPasswords = 0
-    for num in range(start, end+1):
+    for num in range(s, e+1):
         string = str(num)
 
         doubleAndIncreasing = checkDouble(string)
@@ -30,7 +30,6 @@ def checkIncreasing(string):
 def checkDouble(string):
     double = False
     i = 0
-    counter = 0
     
     increasing = checkIncreasing(string)
 
